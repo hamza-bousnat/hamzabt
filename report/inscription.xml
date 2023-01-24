@@ -1,0 +1,107 @@
+
+  <odoo>
+
+
+    <template id="report_inscription_detail">
+
+         <t t-call="web.basic_layout">
+         <t t-foreach="docs" t-as="o">
+         <t t-call="web.external_layout">
+
+                <div class="oe_structure"/>
+
+
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <div class="address-header">
+
+                               <div>leansoft</div>
+                               <div>Technopole 2 , Agadir bay , N° EB304</div>
+                               <div>Agadir 80000 </div>
+                               <div>Morocco</div>
+                </div>
+                                <style>
+                                    h2 {
+                                    color: #7c795d;
+                                    display: flex;
+                                    position:relative;
+                                    left:230px;
+                                    font-family: cursive;
+                                    font-size: 45px;
+                                    font-weight: normal;
+                                    line-height: 48px;
+                                    top: 200 px;
+                                    }
+                                    oe_structure{
+                                    display: flex;
+                                     justify-content:center;
+
+                                    }
+                                    table
+                                    {
+                                     border-collapse: collapse;
+                                     width: 100%;
+                                     top: 50px;
+                                     display: flex;
+                                     position:relative;
+                                     left:230px;
+                                     justify-content:center;
+
+                                    }
+                                    th,td
+                                    {
+                                      text-align: left;
+                                      padding: 8px;
+                                    }
+
+                                    tr:nth-child(even){background-color: #f2f2f2}
+
+                                    th {
+                                      background-color: #04AA6D;
+                                      color: white;
+                                      }
+                                    .address-header{
+                                       position:relative;
+                                       display: flex;
+                                       left:10px;
+                                       top:-55px;
+                                    }
+
+
+                                </style>
+
+
+
+
+
+                                <table class="table"  style="border: 3px solid black ;">
+                                       <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Etat inscription</th>
+                             <th>Date inscription</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                           <tr t-foreach="docs" t-as="o">
+                            <td><t t-esc="o.name"/></td>
+                            <td><t t-esc="o.prenom"/></td>
+                            <td><t t-esc="o.status"/></td>
+                            <td><t t-esc="o.date_inscription"/></td>
+
+                        </tr>
+              </tbody>
+                                </table>
+                                </div>
+                            </div>
+
+                    </t>
+              </t>
+                </t>
+    </template>
+
+</odoo>
+

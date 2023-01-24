@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+
+       <menuitem id="inscription_root"
+            name="Inscription"
+            action="action_inscription_management"
+            sequence="10"/>
+
+
+       <menuitem id="gestion_inscription_root"
+             name="User info"
+             parent="inscription_root"
+             action="action_inscription_management"
+             sequence="10"/>
+
+       <menuitem id="gestions_inscription"
+             name="Modification"
+             parent="gestion_inscription_root"
+             sequence="10"/>
+
+
+
+</odoo>

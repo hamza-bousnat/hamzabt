@@ -1,0 +1,14 @@
+<odoo>
+
+    <record id="report_inscription_details" model="ir.actions.report">
+        <field name="name">inscription Details</field>
+        <field name="model">inscription.management</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inscription_management.report_inscription_detail</field>
+        <field name="report_file">inscription_management.report_inscription_detail</field>
+        <field name="binding_model_id" ref="model_inscription_management"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+</odoo>
